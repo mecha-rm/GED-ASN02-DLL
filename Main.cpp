@@ -6,12 +6,15 @@
 	* Roderick “R.J.” Montague (100701758)
 */
 
-// #include <iostream>
+#include <iostream>
+#include "MetricLogger.h"
 
-// int main()
-// {
-//     std::cout << "Hello World!\n";
-// }
+int main()
+{
+    std::cout << "Hello World!\n";
+
+	system("pause");
+}
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

@@ -1,6 +1,12 @@
 ﻿  Main.cpp
+C:\Users\roder\source\year 3 repos\GED-ASN02-DLL\MetricLogger.h(49,48): warning C4251: 'MetricLogger::metrics': class 'std::unordered_map<std::string,float,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,float>>>' needs to have dll-interface to be used by clients of class 'MetricLogger'
+C:\Users\roder\source\year 3 repos\GED-ASN02-DLL\MetricLogger.h(49): message : see declaration of 'std::unordered_map<std::string,float,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,float>>>'
   MetricLogger.cpp
+C:\Users\roder\source\year 3 repos\GED-ASN02-DLL\MetricLogger.h(49,48): warning C4251: 'MetricLogger::metrics': class 'std::unordered_map<std::string,float,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,float>>>' needs to have dll-interface to be used by clients of class 'MetricLogger'
+C:\Users\roder\source\year 3 repos\GED-ASN02-DLL\MetricLogger.h(49): message : see declaration of 'std::unordered_map<std::string,float,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,float>>>'
   Wrapper.cpp
+C:\Users\roder\source\year 3 repos\GED-ASN02-DLL\MetricLogger.h(49,48): warning C4251: 'MetricLogger::metrics': class 'std::unordered_map<std::string,float,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,float>>>' needs to have dll-interface to be used by clients of class 'MetricLogger'
+C:\Users\roder\source\year 3 repos\GED-ASN02-DLL\MetricLogger.h(49): message : see declaration of 'std::unordered_map<std::string,float,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,float>>>'
   Generating Code...
      Creating library C:\Users\roder\source\year 3 repos\GED-ASN02-DLL\Debug\GED-ASN02-DLL.lib and object C:\Users\roder\source\year 3 repos\GED-ASN02-DLL\Debug\GED-ASN02-DLL.exp
-  GED-ASN02-DLL.vcxproj -> C:\Users\roder\source\year 3 repos\GED-ASN02-DLL\Debug\GED-ASN02-DLL.dll
+  GED-ASN02-DLL.vcxproj -> C:\Users\roder\source\year 3 repos\GED-ASN02-DLL\Debug\GED-ASN02-DLL.exe
