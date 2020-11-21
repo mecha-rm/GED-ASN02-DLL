@@ -21,7 +21,7 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MetricLogger.cpp">
+    <ClCompile Include="MetricsLogger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +32,7 @@
     <ClInclude Include="PluginSettings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MetricLogger.h">
+    <ClInclude Include="MetricsLogger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

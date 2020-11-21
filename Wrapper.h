@@ -1,7 +1,7 @@
 #pragma once
 
 // #include class header
-#include "MetricLogger.h"
+#include "MetricsLogger.h"
 
 #ifdef __cplusplus
 extern "C" // convert to C code.
