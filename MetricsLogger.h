@@ -32,6 +32,9 @@ public:
 	// returns a metric based on the provided key
 	float GetMetric(std::string key);
 
+	// returns the metric at the provided index.
+	// float GetMetricAtIndex(int index);
+
 	// returns the metric count
 	int GetMetricCount() const;
 
@@ -54,6 +57,9 @@ public:
 
 	// gets the file name, which includes its path.
 	std::string GetFile() const;
+
+	// returns the length of the file name
+	int GetFileNameLength() const;
 
 	// imports metrics from set file
 	// any underscore in key names is replaced with a space

@@ -178,6 +178,20 @@ float MetricsLogger::GetMetric(std::string key)
 		return 0.0F;
 }
 
+// gets the metric at the provided index
+// float MetricsLogger::GetMetricAtIndex(int index)
+// {
+// 	// if the index is out of bounds
+// 	if (index < 0 || index > metrics.size())
+// 		return 0.0F;
+// 
+// 	// gets the iterator
+// 	auto it = metrics.begin();
+// 	std::advance(it, index);
+// 
+// 	return (*it).second;
+// }
+
 // gets the amount of metrics
 int MetricsLogger::GetMetricCount() const
 {
@@ -254,6 +268,12 @@ void MetricsLogger::SetFile(std::string file)
 std::string MetricsLogger::GetFile() const
 {
 	return file;
+}
+
+// gets the length of the file name
+int MetricsLogger::GetFileNameLength() const
+{
+	return file.length();
 }
 
 // imports metrics from file
@@ -346,7 +366,7 @@ bool MetricsLogger::ExportMetrics()
 	std::ofstream f(file);
 	std::string line = "";
 
-	// if the file isn't open
+	// if the file isn't open. Taken out since it can't make folders otherwise.
 	if (!f.is_open())
 		return false;
 
