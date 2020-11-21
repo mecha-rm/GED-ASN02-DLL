@@ -8,19 +8,19 @@ extern "C" // convert to C code.
 {
 #endif
 	// adds the metric using a key (of length 'length'), and sets to the provided value.
-	PLUGIN_API void AddMetric(const char* key, int length, float value);
+	PLUGIN_API void AddMetric(const char* key, float value);
 	
 	// adds the metric using a key (of length 'length'), and sets to the provided value if 'replaceValue' is true.
 	// PLUGIN_API void AddMetric(char* key, int length, float value, int replaceValue);
 	
 	// edits a metric
-	PLUGIN_API void EditMetric(const char* key, int length, float newValue);
+	PLUGIN_API void EditMetric(const char* key, float newValue);
 	
 	// removes a metric based on its key.
-	PLUGIN_API void RemoveMetric(const char* key, int length);
+	PLUGIN_API void RemoveMetric(const char* key);
 
 	// returns a metric based on the provided key
-	PLUGIN_API float GetMetric(const char* key, int length);
+	PLUGIN_API float GetMetric(const char* key);
 
 	// returns the metric count
 	PLUGIN_API int GetMetricCount();
@@ -42,7 +42,7 @@ extern "C" // convert to C code.
 	// sets the file this metric logger will save to.
 	// must allocate data before calling this function
 	// TOOD: change to return char*
-	PLUGIN_API void SetFile(const char* file, int length);
+	PLUGIN_API void SetFile(const char* file);
 	
 	// gets the file name, which includes its path.
 	// must allocate data before calling this function
@@ -67,8 +67,6 @@ extern "C" // convert to C code.
 	
 	// // exports metrics to a file (saves provided file)
 	// bool ExportMetrics(char* file);
-
-	// PLUGIN_API const char* Func();
 
 #ifdef __cplusplus
 }

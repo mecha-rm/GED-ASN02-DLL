@@ -6,9 +6,9 @@
 	* Roderick “R.J.” Montague (100701758)
 */
 
-#include <iostream>
-#include "MetricsLogger.h"
-
+//#include <iostream>
+//#include "MetricsLogger.h"
+//
 //// prints out the metrics data
 //void PrintMetricsData(MetricsLogger logger)
 //{
@@ -32,7 +32,7 @@
 //
 //int main()
 //{
-//    // std::cout << "Hello World!\n";
+//	// std::cout << "Hello World!\n";
 //
 //	// copying values from a string to a char array
 //	// {
@@ -64,9 +64,16 @@
 //	logger.AddMetric("A", 13.451, true);
 //	logger.AddMetric("A", -0.2141, false);
 //	logger.EditMetric("XR", -24.01F);
-//	
+//
 //	// adding and editing metrics (invalid operations)
 //	logger.EditMetric("AWY", -120);
+//
+//	// TODO: test index function
+//	// shows print at index
+//	// {
+//	// 	int index = 2;
+//	// 	std::cout << "B at Index " << std::endl;
+//	// }
 //
 //	// removing values
 //	// logger.RemoveMetric();

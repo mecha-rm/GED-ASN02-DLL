@@ -3,7 +3,7 @@
 MetricsLogger logger;
 
 // adds a metric
-PLUGIN_API void AddMetric(const char* key, int length, float value)
+PLUGIN_API void AddMetric(const char* key, float value)
 {
 	logger.AddMetric(std::string(key), value);
 }
@@ -16,19 +16,19 @@ PLUGIN_API void AddMetric(const char* key, int length, float value)
 // }
 
 // edits a metric
-void EditMetric(const char* key, int length, float newValue)
+void EditMetric(const char* key, float newValue)
 {
 	logger.AddMetric(std::string(key), newValue);
 }
 
 // removes a metric
-PLUGIN_API void RemoveMetric(const char* key, int length)
+PLUGIN_API void RemoveMetric(const char* key)
 {
 	logger.RemoveMetric(key);
 }
 
 // gets the metric
-PLUGIN_API float GetMetric(const char* key, int length)
+PLUGIN_API float GetMetric(const char* key)
 {
 	return logger.GetMetric(std::string(key));
 }
@@ -52,7 +52,7 @@ PLUGIN_API void Clear()
 }
 
 // sets the file
-PLUGIN_API void SetFile(const char* file, int length)
+PLUGIN_API void SetFile(const char* file)
 {
 	logger.SetFile(std::string(file));
 }
@@ -86,8 +86,3 @@ PLUGIN_API int ExportMetrics()
 {
 	return logger.ExportMetrics();
 }
-
-// PLUGIN_API const char* Func()
-// {
-// 	return nullptr;
-// }

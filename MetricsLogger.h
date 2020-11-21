@@ -32,8 +32,13 @@ public:
 	// returns a metric based on the provided key
 	float GetMetric(std::string key);
 
+	// TODO: implement these functions
+
 	// returns the metric at the provided index.
 	// float GetMetricAtIndex(int index);
+
+	// returns key at provided index
+	// std::string GetKeyAtIndex(int index);
 
 	// returns the metric count
 	int GetMetricCount() const;
@@ -60,6 +65,8 @@ public:
 
 	// returns the length of the file name
 	int GetFileNameLength() const;
+
+	// TODO: allow creation of directory, and ability to get file size
 
 	// imports metrics from set file
 	// any underscore in key names is replaced with a space

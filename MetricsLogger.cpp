@@ -192,6 +192,12 @@ float MetricsLogger::GetMetric(std::string key)
 // 	return (*it).second;
 // }
 
+// gets the key at the index
+// std::string MetricsLogger::GetKeyAtIndex(int index)
+// {
+// 
+// }
+
 // gets the amount of metrics
 int MetricsLogger::GetMetricCount() const
 {
