@@ -36,8 +36,7 @@ PLUGIN_API float GetMetric(const char* key)
 // gets the key at the index
 PLUGIN_API const char* GetKeyAtIndex(int index)
 {
-	std::string str = logger.GetKeyAtIndex(index);
-	return str.c_str();
+	return logger.GetKeyAtIndex(index).c_str();
 }
 
 // gets the value at the index
@@ -65,27 +64,52 @@ PLUGIN_API void Clear()
 }
 
 // generates a array of keys
-PLUGIN_API const char** GenerateKeyArray()
-{
-	std::string* arr1 = logger.GenerateKeyArray();
-	int count = logger.GetMetricCount();
-	const char** arr2 = new const char*[count];
+//PLUGIN_API const char** GenerateKeyArray()
+//{
+//	std::string* arr1 = logger.GenerateKeyArray();
+//	int count = logger.GetMetricCount();
+//	const char** arr2 = new const char*[count];
+//
+//	// fills the arrays
+//	for (int i = 0; i < count; i++)
+//	{
+//		arr2[i] = arr1[i].c_str();
+//	}
+//	
+//	return arr2;
+//}
 
-	// fills the arrays
-	for (int i = 0; i < count; i++)
-	{
-		arr2[i] = arr1[i].c_str();
-	}
-	
-	return arr2;
-}
+// fills a key array
+// PLUGIN_API void GenerateKeyArray(const char** arr, int size)
+// {
+// 	// instead of generating an array of values, it just copies the values to the provided array
+// 	int count = logger.GetMetricCount();
+// 
+// 	// fills the array
+// 	for (int i = 0; i < count && i < size; i++)
+// 	{
+// 		arr[i] = logger.GetKeyAtIndex(i).c_str();
+// 	}
+// }
 
 // generates a value array and returns it
-PLUGIN_API float* GenerateValueArray()
-{
-	float* arr = logger.GenerateValueArray();
-	return arr;
-}
+// PLUGIN_API float* GenerateValueArray()
+// {
+// 	float* arr = logger.GenerateValueArray();
+// 	return arr;
+// }
+
+// fills a value array
+// PLUGIN_API void GenerateValueArray(float* arr, int size)
+// {
+// 	int count = logger.GetMetricCount();
+// 
+// 	// fills the array
+// 	for (int i = 0; i < count && i < size; i++)
+// 	{
+// 		arr[i] = logger.GetValueAtIndex(i);
+// 	}
+// }
 
 // sets the file
 PLUGIN_API void SetFile(const char* file)

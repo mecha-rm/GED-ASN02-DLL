@@ -39,11 +39,13 @@ extern "C" // convert to C code.
 	
 	// returns and returns an array of list keys.
 	// this is not saved
-	PLUGIN_API const char** GenerateKeyArray();
+	// PLUGIN_API const char** GenerateKeyArray();
+	// PLUGIN_API void GenerateKeyArray(const char** arr, int size);
 	 
 	// generates an array of values in the list.
 	// this is not saved
-	PLUGIN_API float* GenerateValueArray();
+	// PLUGIN_API float* GenerateValueArray();
+	// PLUGIN_API void GenerateValueArray(float* arr, int size);
 	
 	// sets the file this metric logger will save to.
 	// must allocate data before calling this function
