@@ -82,6 +82,19 @@
 //	PrintMetricsData(logger);
 //	std::cout << std::endl;
 //
+//	{
+//		std::cout << "Numerical Order: " << std::endl;
+//		int count = logger.GetMetricCount();
+//
+//		for (int i = 0; i < count; i++)
+//		{
+//			std::cout << "Metric At Index " << i << " - " <<
+//				logger.GetKeyAtIndex(i) << " : " << logger.GetValueAtIndex(i) << "\n";
+//		}
+//
+//		std::cout << std::endl;
+//	}
+//
 //	// writing metrics to file
 //	std::cout << "Saving Data from \"" << file << "\"..." << std::endl;
 //	std::cout << "File Written Successfully? - " << std::boolalpha << logger.ExportMetrics(file) << std::endl;

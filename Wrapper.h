@@ -22,6 +22,12 @@ extern "C" // convert to C code.
 	// returns a metric based on the provided key
 	PLUGIN_API float GetMetric(const char* key);
 
+	// returns key at provided index
+	PLUGIN_API const char* GetKeyAtIndex(int index);
+
+	// returns the metric at the provided index.
+	PLUGIN_API float GetValueAtIndex(int index);
+
 	// returns the metric count
 	PLUGIN_API int GetMetricCount();
 	
@@ -33,11 +39,11 @@ extern "C" // convert to C code.
 	
 	// returns and returns an array of list keys.
 	// this is not saved
-	// std::string* GenerateKeyArray();
-	// 
+	PLUGIN_API const char** GenerateKeyArray();
+	 
 	// generates an array of values in the list.
 	// this is not saved
-	// float* GenerateValueArray();
+	PLUGIN_API float* GenerateValueArray();
 	
 	// sets the file this metric logger will save to.
 	// must allocate data before calling this function

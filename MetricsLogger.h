@@ -19,10 +19,6 @@ public:
 	// if that metric already exists, then its added to its bucket
 	void AddMetric(std::string key, float value, bool replaceValue);
 
-	// inserts a metric
-	// if 'replaceValue' is true, then the value here is replaced
-	// void InsertMetric(std::string key, int index, float value);
-
 	// edits a metric
 	void EditMetric(std::string key, float newValue);
 
@@ -32,13 +28,11 @@ public:
 	// returns a metric based on the provided key
 	float GetMetric(std::string key);
 
-	// TODO: implement these functions
+	// returns key at provided index
+	std::string GetKeyAtIndex(int index);
 
 	// returns the metric at the provided index.
-	// float GetMetricAtIndex(int index);
-
-	// returns key at provided index
-	// std::string GetKeyAtIndex(int index);
+	float GetValueAtIndex(int index);
 
 	// returns the metric count
 	int GetMetricCount() const;

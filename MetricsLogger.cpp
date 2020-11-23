@@ -139,19 +139,6 @@ void MetricsLogger::AddMetric(std::string key, float value, bool replaceValue)
 	}
 }
 
-// inserts a metric
-// void MetricsLogger::InsertMetric(std::string key, int index, float value)
-// {
-// 	if (index > metrics.size())
-// 	{
-// 		metrics[key] = value;
-// 	}
-// 	else
-// 	{
-// 		metrics.insert(std::make_pair<std::string, float>(key, value));
-// 	}
-// }
-
 // edits a metric
 void MetricsLogger::EditMetric(std::string key, float newValue)
 {
@@ -178,25 +165,33 @@ float MetricsLogger::GetMetric(std::string key)
 		return 0.0F;
 }
 
-// gets the metric at the provided index
-// float MetricsLogger::GetMetricAtIndex(int index)
-// {
-// 	// if the index is out of bounds
-// 	if (index < 0 || index > metrics.size())
-// 		return 0.0F;
-// 
-// 	// gets the iterator
-// 	auto it = metrics.begin();
-// 	std::advance(it, index);
-// 
-// 	return (*it).second;
-// }
-
 // gets the key at the index
-// std::string MetricsLogger::GetKeyAtIndex(int index)
-// {
-// 
-// }
+std::string MetricsLogger::GetKeyAtIndex(int index)
+{
+	// if the index is out of bounds
+	if (index < 0 || index >= metrics.size())
+		return "";
+
+	// gets the iterator and increments it
+	auto it = metrics.begin();
+	std::advance(it, index);
+
+	return (*it).first;
+}
+
+// gets the metric at the provided index
+float MetricsLogger::GetValueAtIndex(int index)
+{
+	// if the index is out of bounds
+	if (index < 0 || index >= metrics.size())
+		return 0.0F;
+
+	// gets the iterator and increments it
+	auto it = metrics.begin();
+	std::advance(it, index);
+
+	return (*it).second;
+}
 
 // gets the amount of metrics
 int MetricsLogger::GetMetricCount() const

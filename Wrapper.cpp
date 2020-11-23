@@ -33,6 +33,19 @@ PLUGIN_API float GetMetric(const char* key)
 	return logger.GetMetric(std::string(key));
 }
 
+// gets the key at the index
+PLUGIN_API const char* GetKeyAtIndex(int index)
+{
+	std::string str = logger.GetKeyAtIndex(index);
+	return str.c_str();
+}
+
+// gets the value at the index
+PLUGIN_API float GetValueAtIndex(int index)
+{
+	return logger.GetValueAtIndex(index);
+}
+
 // gets the metric count
 PLUGIN_API int GetMetricCount()
 {
@@ -49,6 +62,29 @@ PLUGIN_API int IsEmpty()
 PLUGIN_API void Clear()
 {
 	return logger.Clear();
+}
+
+// generates a array of keys
+PLUGIN_API const char** GenerateKeyArray()
+{
+	std::string* arr1 = logger.GenerateKeyArray();
+	int count = logger.GetMetricCount();
+	const char** arr2 = new const char*[count];
+
+	// fills the arrays
+	for (int i = 0; i < count; i++)
+	{
+		arr2[i] = arr1[i].c_str();
+	}
+	
+	return arr2;
+}
+
+// generates a value array and returns it
+PLUGIN_API float* GenerateValueArray()
+{
+	float* arr = logger.GenerateValueArray();
+	return arr;
 }
 
 // sets the file
